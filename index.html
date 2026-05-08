@@ -15,9 +15,14 @@
   <body>
     <header class="site-header" data-header>
       <a class="brand" href="index.html" aria-label="kyuu トップへ">
-        <img src="assets/kyuu-logo.png" alt="kyuu" class="brand-logo">
+        <img src="assets/kyuu-logo-header.png" alt="kyuu" class="brand-logo">
       </a>
-      <nav class="nav" aria-label="メインナビゲーション">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="メインナビゲーション" data-nav>
         <a href="works.html">Works</a>
         <a href="support.html">Support</a>
         <a href="contact.html">Contact</a>
