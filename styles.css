@@ -32,6 +32,19 @@ body {
   line-height: 1.75;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.site-footer {
+  flex-shrink: 0;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -609,7 +622,7 @@ h3 {
 
   .menu-toggle {
     position: relative;
-    display: inline-flex;
+    display: inline-flex !important;
   }
 
   .site-header .nav {
@@ -680,12 +693,23 @@ h3 {
   }
 
   .project-grid {
-    gap: 28px 18px;
+    gap: 24px 18px;
   }
 
   .project-icon {
     width: min(28vw, 116px);
     border-radius: 16px;
+  }
+
+  .home-stage {
+    align-items: start;
+    min-height: auto;
+    padding-top: 28px;
+    padding-bottom: 34px;
+  }
+
+  .project-name {
+    font-size: 13px;
   }
 
   .card-topline {
