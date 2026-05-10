@@ -157,11 +157,27 @@ a {
   white-space: nowrap;
 }
 
+.home-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 320px);
+  align-items: center;
+  gap: clamp(32px, 7vw, 96px);
+  min-height: calc(78vh - 88px);
+  padding: clamp(62px, 8vw, 112px) clamp(20px, 5vw, 72px) clamp(46px, 6vw, 78px);
+}
+
+.home-logo {
+  width: min(100%, 300px);
+  justify-self: end;
+  mix-blend-mode: screen;
+}
+
 .home-stage {
   display: grid;
-  place-items: center;
-  min-height: calc(100vh - 180px);
+  gap: 34px;
+  justify-items: center;
   padding: clamp(54px, 8vw, 96px) clamp(20px, 5vw, 72px) clamp(72px, 9vw, 118px);
+  border-top: 1px solid var(--line);
 }
 
 .printing-page {
@@ -375,6 +391,12 @@ h3 {
   gap: 16px;
 }
 
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
 .work-card,
 .legal-block,
 .support-card,
@@ -431,6 +453,22 @@ h3 {
   margin-left: 6px;
 }
 
+.inline-link {
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.text-link.inline-link {
+  margin-top: 0;
+}
+
+.text-link.inline-link::after,
+.inline-link::after {
+  content: none;
+}
+
 .split-section {
   display: grid;
   grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
@@ -466,6 +504,22 @@ h3 {
   border-color: #111111;
 }
 
+.compliance-band {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(20px, 4vw, 44px);
+  border-top: 1px solid var(--line);
+}
+
+.check-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
 .page-hero {
   padding: clamp(56px, 7vw, 92px) clamp(20px, 5vw, 72px) clamp(34px, 5vw, 54px);
   border-bottom: 1px solid var(--line);
@@ -484,7 +538,8 @@ h3 {
 .app-hero-grid,
 .about-grid,
 .support-grid,
-.legal-grid {
+.legal-grid,
+.contact-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.86fr) minmax(280px, 0.55fr);
   gap: 18px;
@@ -562,10 +617,14 @@ h3 {
   padding-bottom: clamp(48px, 6vw, 72px);
 }
 
+.work-card h2,
+.support-card h2,
 .support-card h3,
+.profile-card h2,
 .profile-card h3,
 .legal-block h2 {
   font-size: 22px;
+  line-height: 1.22;
 }
 
 .legal-block h3 {
@@ -592,6 +651,16 @@ h3 {
 .legal-block ul {
   margin: 0;
   padding-left: 20px;
+}
+
+.notice {
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  color: var(--ink);
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 14px;
 }
 
 .site-footer {
@@ -652,12 +721,16 @@ h3 {
   }
 
   .hero,
+  .home-intro,
   .work-grid,
+  .work-list,
   .split-section,
   .app-hero-grid,
   .about-grid,
   .support-grid,
-  .legal-grid {
+  .legal-grid,
+  .contact-grid,
+  .compliance-band {
     grid-template-columns: 1fr;
   }
 
@@ -672,6 +745,11 @@ h3 {
   .support-band {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .home-logo {
+    justify-self: start;
+    width: min(58vw, 220px);
   }
 
   .site-footer nav {
@@ -706,6 +784,11 @@ h3 {
     min-height: auto;
     padding-top: 28px;
     padding-bottom: 34px;
+  }
+
+  .home-intro {
+    min-height: auto;
+    padding-top: 42px;
   }
 
   .project-name {
