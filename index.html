@@ -17,49 +17,30 @@
       <a class="brand" href="index.html" aria-label="kyuu トップへ">
         <img src="assets/kyuu-logo-header.png" alt="kyuu" class="brand-logo">
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle style="display: none;">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="nav" id="site-nav" aria-label="メインナビゲーション" data-nav>
-        <a href="works.html">Works</a>
-        <a href="support.html">Sponsor</a>
-        <a href="contact.html">Contact</a>
-        <a href="legal.html">Legal</a>
-      </nav>
+      <div class="header-actions">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" id="site-nav" aria-label="メインナビゲーション" data-nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="works.html">Works</a>
+          <a href="support.html">Sponsor</a>
+          <a href="legal.html">Legal</a>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section class="home-intro" aria-labelledby="home-title">
-        <div>
-          <p class="eyebrow">Independent app studio</p>
-          <h1 id="home-title">kyuu</h1>
-          <p class="lead">
-            kyuuは、個人事業としてWebアプリ、Chrome拡張機能、小さなデジタルツールを企画・開発・運営しています。
-            公開中のプロダクト、支援メニュー、商取引に関する開示情報をこのサイトにまとめています。
-          </p>
-          <div class="action-row">
-            <a class="button primary" href="works.html">制作物を見る</a>
-            <a class="button secondary" href="support.html">支援メニュー</a>
-          </div>
-        </div>
-        <img class="home-logo" src="assets/kyuu-logo.png" alt="kyuu">
-      </section>
-
       <section class="home-stage" aria-labelledby="projects-title">
-        <div class="section-head">
-          <p class="eyebrow">Projects</p>
-          <h2 id="projects-title">Products and works</h2>
-          <p>
-            現在公開しているサービスと準備中の制作物です。各ページで内容、提供形態、料金やサポート条件を確認できます。
-          </p>
-        </div>
+        <h1 id="projects-title" class="visually-hidden">kyuu projects</h1>
         <div class="project-grid">
-          <a class="project-tile" href="drifttt.html">
+          <div class="project-tile project-tile-static">
             <span class="project-icon"><img src="assets/services/drifttt.png" alt=""></span>
             <span class="project-name">drifttt</span>
-          </a>
+          </div>
           <a class="project-tile" href="works.html">
             <span class="project-icon"><img src="assets/services/tabkma.png" alt=""></span>
             <span class="project-name">tbkma</span>
@@ -72,35 +53,39 @@
             <span class="project-icon"><img src="assets/services/damaru.png" alt=""></span>
             <span class="project-name">damaru</span>
           </a>
-          <a class="project-tile" href="support.html">
+          <div class="project-tile project-tile-static">
             <span class="project-icon"><img src="assets/services/kyuu.png" alt=""></span>
-            <span class="project-name">sponsor</span>
-          </a>
+            <span class="project-name">kyuu</span>
+          </div>
+          <div class="project-tile project-tile-static">
+            <span class="project-icon"><img src="assets/services/kyuu.png" alt=""></span>
+            <span class="project-name">kyuu</span>
+          </div>
+          <div class="project-tile project-tile-static">
+            <span class="project-icon"><img src="assets/services/kyuu.png" alt=""></span>
+            <span class="project-name">kyuu</span>
+          </div>
+          <div class="project-tile project-tile-static">
+            <span class="project-icon"><img src="assets/services/kyuu.png" alt=""></span>
+            <span class="project-name">kyuu</span>
+          </div>
+          <div class="project-tile project-tile-static">
+            <span class="project-icon"><img src="assets/services/kyuu.png" alt=""></span>
+            <span class="project-name">kyuu</span>
+          </div>
         </div>
-      </section>
-
-      <section class="section compliance-band" aria-labelledby="commerce-title">
-        <div>
-          <p class="eyebrow">Commerce disclosure</p>
-          <h2 id="commerce-title">決済前に確認できる情報</h2>
-        </div>
-        <ul class="check-list">
-          <li>商品・サービス内容、価格、通貨、支払方法を各ページに記載します。</li>
-          <li>返金、キャンセル、提供時期、問い合わせ先を明記します。</li>
-          <li>特定商取引法に基づく表記、プライバシーポリシー、利用規約を公開しています。</li>
-        </ul>
-        <a class="button secondary" href="legal.html#commerce-disclosure">特商法表記を見る</a>
       </section>
     </main>
 
     <footer class="site-footer">
+      <p>&copy; <span data-year></span> kyuu</p>
       <nav aria-label="フッターナビゲーション">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="works.html">Works</a>
         <a href="support.html">Sponsor</a>
-        <a href="contact.html">Contact</a>
-        <a href="legal.html">特商法表記</a>
+        <a href="legal.html">Legal</a>
       </nav>
-      <p>&copy; <span data-year></span> kyuu</p>
     </footer>
 
     <script src="script.js"></script>

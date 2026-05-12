@@ -13,39 +13,41 @@
       <a class="brand" href="index.html" aria-label="kyuu トップへ">
         <img src="assets/kyuu-logo-header.png" alt="kyuu" class="brand-logo">
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle style="display: none;">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="nav" id="site-nav" aria-label="メインナビゲーション" data-nav>
-        <a href="works.html">Works</a>
-        <a href="support.html">Sponsor</a>
-        <a href="contact.html">Contact</a>
-        <a href="legal.html">Legal</a>
-      </nav>
+      <div class="header-actions">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" id="site-nav" aria-label="メインナビゲーション" data-nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="works.html">Works</a>
+          <a href="support.html">Sponsor</a>
+          <a href="legal.html">Legal</a>
+        </nav>
+      </div>
     </header>
 
     <main>
       <section class="page-hero">
-        <p class="eyebrow">Sponsor</p>
-        <h1>Support kyuu</h1>
+        <h1>Sponsor</h1>
         <p class="page-lead">
-          kyuuのアプリ、拡張機能、制作物の継続的な開発を応援するための支援メニューです。
-          支援はデジタルサービスの運営費、検証環境、公開物の保守に利用します。
+          アプリ、拡張機能、制作物の継続的な開発を応援するためにご支援いただけると幸いです。<br>
+          支援はデジタルサービスの運営費、検証環境、公開物の保守に使用させていただきます。
         </p>
       </section>
 
       <section class="section support-grid">
         <article class="support-card">
-          <h2>One-time support</h2>
+          <h2>支援</h2>
           <p>
-            任意の金額で一度だけ支援できます。返礼品の発送はありません。決済完了後、領収書メールが送信されます。
+            任意の金額を指定していただけます。コーヒー1杯分からご支援いただけると幸いです。決済完了後、領収書メールが送信されます。
           </p>
           <dl class="detail-list">
             <div>
-              <dt>価格</dt>
-              <dd>500円、1,500円、5,000円、または個別に表示された金額（税込・JPY）</dd>
+              <dt>支援額</dt>
+              <dd>Stripe Payment Linksの決済ページで指定された金額（税込・JPY）</dd>
             </div>
             <div>
               <dt>支払方法</dt>
@@ -53,23 +55,23 @@
             </div>
             <div>
               <dt>提供時期</dt>
-              <dd>決済完了時点で支援受付が完了します。物品の配送はありません。</dd>
+              <dd>物品の配送はありませんが、心より感謝いたします。決済完了時点で支援受付が完了します。</dd>
             </div>
             <div>
               <dt>キャンセル</dt>
               <dd>デジタル支援の性質上、決済完了後のお客様都合による返金は原則として承っていません。</dd>
             </div>
           </dl>
-          <a class="button primary" href="contact.html">支援について問い合わせる</a>
+          <a class="button primary" href="contact.html">支援する（Stripe Payment Links決済）</a>
         </article>
 
         <aside class="profile-card">
-          <h2>Before payment</h2>
+          <h2>決済前の確認</h2>
           <p>
             決済前に、サービス内容、価格、通貨、支払方法、返金条件、問い合わせ先をご確認ください。
             商取引に関する開示は下記ページにまとめています。
           </p>
-          <a class="text-link" href="legal.html#commerce-disclosure">特定商取引法に基づく表記</a>
+          <a class="text-link" href="legal.html#commerce-disclosure">Legal</a>
         </aside>
       </section>
     </main>
@@ -77,10 +79,11 @@
     <footer class="site-footer">
       <p>&copy; <span data-year></span> kyuu</p>
       <nav aria-label="フッターナビゲーション">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="works.html">Works</a>
         <a href="support.html">Sponsor</a>
-        <a href="contact.html">Contact</a>
-        <a href="legal.html">特商法表記</a>
+        <a href="legal.html">Legal</a>
       </nav>
     </footer>
 
