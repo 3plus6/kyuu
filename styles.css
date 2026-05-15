@@ -386,6 +386,12 @@ h3 {
   text-underline-offset: 4px;
 }
 
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
 .inline-link {
   color: var(--ink);
   font-weight: 800;

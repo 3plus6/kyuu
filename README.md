@@ -1,12 +1,41 @@
 # kyuu website
 
-個人事業の受け口、制作物一覧、アプリ・拡張機能の配布導線、支援導線、法務表記をまとめたGitHub Pages向け静的サイトです。
+kyuuの公式サイトです。個人事業の受け口、制作物一覧、Chrome拡張機能・アプリの公開導線、Sponsor導線、法務表記をまとめています。
 
-## 主なページ
+公開URL:
 
-- `index.html`: トップページ、制作物一覧、支援導線
-- `about.html`: kyuuとi10kinの紹介、仕事の相談・問い合わせ先
+- https://3plus6.jp/
+
+GitHub Pages:
+
+- https://3plus6.github.io/kyuu/
+
+## Pages
+
+- `index.html`: トップページ、制作物アイコン一覧
+- `about.html`: kyuu / i10kin の紹介、事業内容
 - `works.html`: 制作物一覧
-- `support.html`: 支援メニュー、価格、提供条件
-- `contact.html`: 予備の問い合わせページ（通常導線はAboutに集約）
-- `legal.html`: 特定商取引法に基づく表記、プライバシーポリシー、共通利用規約、サービスごとのポリシー
+- `support.html`: Sponsorページ、Stripe Payment Linksへの導線
+- `contact.html`: 問い合わせページ
+- `legal.html`: 特定商取引法に基づく表記、プライバシーポリシー、利用規約、サービス別ポリシー
+
+## SEO / Search Console
+
+- `CNAME`: `3plus6.jp`
+- `robots.txt`: クロール許可とサイトマップURL
+- `sitemap.xml`: 主要ページのサイトマップ
+- 各HTMLに `canonical` を設定
+
+Search Consoleには `https://3plus6.jp/sitemap.xml` を送信します。
+
+## Deploy
+
+GitHub Pagesの公開元は `main` ブランチのルートです。更新時は `publish` フォルダの中身をGitHubへアップロードします。
+
+`publish` フォルダ自体ではなく、中身をアップロードしてください。
+
+## Notes
+
+- サービスアイコンの正規化済みPNGは `assets/services/` に配置しています。
+- 元画像や書き出し用ファイルは公開対象に含めません。
+- SponsorボタンはStripe Payment Linksに接続しています。
