@@ -19,23 +19,8 @@ GitHub Pages:
 - `contact.html`: 問い合わせページ
 - `legal.html`: 特定商取引法に基づく表記、プライバシーポリシー、利用規約、サービス別ポリシー
 
-## SEO / Search Console
-
-- `CNAME`: `3plus6.jp`
-- `robots.txt`: クロール許可とサイトマップURL
-- `sitemap.xml`: 主要ページのサイトマップ
-- 各HTMLに `canonical` を設定
-
-Search Consoleには `https://3plus6.jp/sitemap.xml` を送信します。
-
 ## Deploy
 
 GitHub Pagesの公開元は `main` ブランチのルートです。更新時は `publish` フォルダの中身をGitHubへアップロードします。
 
 `publish` フォルダ自体ではなく、中身をアップロードしてください。
-
-## Notes
-
-- サービスアイコンの正規化済みPNGは `assets/services/` に配置しています。
-- 元画像や書き出し用ファイルは公開対象に含めません。
-- SponsorボタンはStripe Payment Linksに接続しています。
