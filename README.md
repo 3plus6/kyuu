@@ -15,7 +15,6 @@ GitHub Pages:
 - `index.html`: トップページ、制作物アイコン一覧
 - `about.html`: kyuu / i10kin の紹介、事業内容
 - `support.html`: Sponsorページ、Stripe Payment Linksへの導線
-- `contact.html`: 問い合わせページ
 - `legal.html`: 特定商取引法に基づく表記、プライバシーポリシー、利用規約、サービス別ポリシー
 
 ## Deploy
