@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="kyuuは、個人事業としてWebアプリ、Chrome拡張機能、制作物を公開・運営する小さな開発スタジオです。">
+    <meta property="og:title" content="kyuu">
+    <meta property="og:description" content="個人事業、制作物、アプリ配布、支援のための公式サイト。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/og-image.svg">
+    <title>kyuu | apps, extensions, and small tools</title>
+    <link rel="canonical" href="https://3plus6.jp/">
+    <link rel="icon" href="assets/kyuu-icon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="home-page">
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="kyuu トップへ">
+        <img src="assets/kyuu-logo-header.png" alt="kyuu" class="brand-logo">
+      </a>
+      <div class="header-actions">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" id="site-nav" aria-label="メインナビゲーション" data-nav>
+          <a href="index.html">Home</a>
+          <a href="support.html">Sponsor</a>
+          <a href="legal.html">Legal</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="home-stage" aria-labelledby="projects-title">
+        <h1 id="projects-title" class="visually-hidden">kyuu projects</h1>
+        <div class="project-grid">
+          <div class="project-tile project-tile-static">
+            <span class="project-icon"><img src="assets/services/drifttt.png" alt=""></span>
+            <span class="project-name">drifttt</span>
+          </div>
+          <a class="project-tile" href="https://chromewebstore.google.com/detail/cmlbmmhjfhagefgmcfifhkoidhicpcjk?utm_source=item-share-cb" target="_blank" rel="noreferrer">
+            <span class="project-icon"><img src="assets/services/tabkma.png" alt=""></span>
+            <span class="project-name">tbkma</span>
+          </a>
+          <a class="project-tile" href="https://chromewebstore.google.com/detail/amfjmkpkbpagcghnbpolegiekeijikhb?utm_source=item-share-cb" target="_blank" rel="noreferrer">
+            <span class="project-icon"><img src="assets/services/remute.png" alt=""></span>
+            <span class="project-name">remute</span>
+          </a>
+          <a class="project-tile" href="https://chromewebstore.google.com/detail/bcoconhognondpgpcakbccdndanaegol?utm_source=item-share-cb" target="_blank" rel="noreferrer">
+            <span class="project-icon"><img src="assets/services/damaru.png" alt=""></span>
+            <span class="project-name">damaru</span>
+          </a>
+          <a class="project-tile" href="https://chromewebstore.google.com/detail/gllfefgljjmemccgkndckamjhbmndlde?utm_source=item-share-cb" target="_blank" rel="noreferrer">
+            <span class="project-icon"><img src="assets/services/tabero-goo.png" alt=""></span>
+            <span class="project-name">tabero→Goo</span>
+          </a>
+          <div class="project-tile project-tile-static">
+            <span class="project-icon"><img src="assets/services/kyuu.png" alt=""></span>
+            <span class="project-name">kyuu</span>
+          </div>
+          <div class="project-tile project-tile-static">
+            <span class="project-icon"><img src="assets/services/kyuu.png" alt=""></span>
+            <span class="project-name">kyuu</span>
+          </div>
+          <div class="project-tile project-tile-static">
+            <span class="project-icon"><img src="assets/services/kyuu.png" alt=""></span>
+            <span class="project-name">kyuu</span>
+          </div>
+          <div class="project-tile project-tile-static">
+            <span class="project-icon"><img src="assets/services/kyuu.png" alt=""></span>
+            <span class="project-name">kyuu</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span data-year></span> kyuu</p>
+      <nav aria-label="フッターナビゲーション">
+        <a href="index.html">Home</a>
+        <a href="support.html">Sponsor</a>
+        <a href="legal.html">Legal</a>
+      </nav>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
