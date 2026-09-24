@@ -307,3 +307,23 @@ a:focus-visible,button:focus-visible { outline:2px solid #f32965; outline-offset
  .build-orbit { top:610px; left:4%; width:52%; }
  .resonance-field { top:825px; left:15%; width:29%; }
 }
+.mobile-collage { display:contents; }
+/* Mobile: flowing copy followed by one overlapping composition, not isolated stickers. */
+@media(max-width:760px), (max-height:600px) {
+ .collage-chapter:not(.opening-chapter) .chapter-stage { height:auto; padding:84px 0 28px; }
+ .collage-chapter:not(.opening-chapter) .chapter-label { position:relative; top:auto; left:auto; margin:0 6% 24px; }
+ .collage-chapter:not(.opening-chapter) .chapter-title { position:relative; top:auto; left:auto; margin:0 6% 28px; }
+ .chapter-copy { position:relative; top:auto; left:auto; margin:0 6%; width:88%; }
+ .chapter-copy .chapter-lead { font-size:clamp(18px,4.8vw,22px); margin-bottom:14px; }
+ .mobile-collage { display:block; position:relative; width:100%; height:112vw; margin-top:32px; }
+ .refine-angel { top:3%; left:-4%; width:112%; z-index:4; }
+ .refine-photo { top:37%; left:1%; width:56%; z-index:2; }
+ .refine-study { top:49%; left:48%; width:46%; z-index:3; }
+ .operate-forest { top:2%; left:-7%; width:108%; z-index:2; }
+ .operate-flower { top:29%; left:57%; width:48%; z-index:4; }
+ .operate-matter { top:50%; left:22%; width:48%; z-index:5; }
+ .operate-cells { top:71%; left:2%; width:82%; z-index:3; }
+ .build-statue { top:0; right:-7%; width:69%; z-index:4; }
+ .build-orbit { top:12%; left:-11%; width:80%; z-index:2; }
+ .resonance-field { top:53%; left:4%; width:53%; z-index:3; }
+}

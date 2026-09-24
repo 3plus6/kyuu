@@ -25,6 +25,13 @@ const chapterLinks = [...document.querySelectorAll("[data-chapter-link]")];
 const openingSection = document.querySelector("#opening");
 const chapterMenu = document.querySelector(".chapter-nav");
 const homeFooter = document.querySelector(".home-footer");
+chapters.forEach(({section, stage, scraps}) => {
+  if (section.id === "opening") return;
+  const composition = document.createElement("div");
+  composition.className = "mobile-collage";
+  stage.append(composition);
+  scraps.forEach(scrap => composition.append(scrap));
+});
 // Reuse the actual artwork for displaced slices; no colored bars or flashing overlay.
 document.querySelectorAll(".refine-angel, .operate-forest, .build-statue").forEach((scrap, scrapIndex) => {
   const source = scrap.querySelector("svg");
@@ -179,11 +186,13 @@ function updateExperience() {
       }
       if (flowingLayout && !opening) {
         // Follow each fragment's own passage, not the section entrance. Keep the image opaque.
-        const top = rect.top + scrap.offsetTop;
-        const progress = clamp((motionViewportHeight - top) / (motionViewportHeight + scrap.offsetHeight));
+        const composition = scrap.parentElement;
+        const top = rect.top + composition.offsetTop;
+        const progress = clamp((motionViewportHeight - top) / (motionViewportHeight + composition.offsetHeight));
         const travel = progress * 2 - 1;
+        const depth = Number(scrap.dataset.enter || 0) * 3 + .65;
         const x = Math.max(-18, Math.min(18, Number(scrap.dataset.x || 0) * 1.5)) * travel;
-        const y = -travel * (50 + Math.min(20, Math.abs(Number(scrap.dataset.y || 0))));
+        const y = -travel * 76 * depth;
         const turn = Math.max(-3, Math.min(3, Number(scrap.dataset.turn || 0) * .3)) * travel;
         scrap.style.transform = `translate3d(${x.toFixed(2)}px,${y.toFixed(2)}px,0) rotate(${turn.toFixed(2)}deg)`;
         scrap.style.opacity = "1";
