@@ -123,7 +123,11 @@ function updateExperience() {
     const rect = section.getBoundingClientRect();
     if (rect.top <= vh * .5) current = section.id;
     if (rect.bottom < 0 || rect.top > vh) return;
-    const p = clamp(-rect.top / Math.max(1, section.offsetHeight - stage.offsetHeight));
+    const flowingLayout = window.innerWidth <= 760 || vh <= 600;
+    // Mobile chapters are not sticky: progress must span their entire passage through the viewport.
+    const p = flowingLayout
+      ? clamp((vh - rect.top) / (vh + section.offsetHeight))
+      : clamp(-rect.top / Math.max(1, section.offsetHeight - stage.offsetHeight));
     const opening = section.id === "opening";
     const reduced = motionPreference.matches;
     const state = fractureStates.get(stage);
@@ -169,7 +173,7 @@ function updateExperience() {
       const approach = clamp((vh - rect.top) / vh);
       const enter = opening ? 1 : clamp((approach - .28 + p * .6 - Number(scrap.dataset.enter || 0)) / .55);
       const ease = 1 - (1 - enter) ** 3;
-      const travel = opening ? p : p * .28;
+      const travel = opening ? p : flowingLayout ? (p - .5) * .8 : p * .28;
       const x = Number(scrap.dataset.x || 0) * travel;
       const y = Number(scrap.dataset.y || 0) * travel + (1 - ease) * 18;
       const turn = Number(scrap.dataset.turn || 0) * (travel + (1 - ease) * .15);

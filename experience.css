@@ -104,7 +104,7 @@ a:focus-visible,button:focus-visible { outline:2px solid #f32965; outline-offset
  .resonance-coil { width:48%; top:59%; left:0; }
  .resonance-chrome { width:37%; top:74%; right:-2%; }
  .resonance-equation { top:48%; left:8%; font-size:9vw; }
- .home-footer { padding-bottom:66px; padding-left:16px; }
+ .home-footer { padding:20px 16px calc(20px + env(safe-area-inset-bottom,0px)); }
 }
 @media(prefers-reduced-motion:reduce) {
  html { scroll-behavior:auto; }
