@@ -289,6 +289,9 @@ a:focus-visible,button:focus-visible { outline:2px solid #f32965; outline-offset
 @media(max-width:760px), (max-height:600px) {
  .collage-chapter:not(.opening-chapter) { height:auto; }
  .collage-chapter:not(.opening-chapter) .chapter-stage { position:relative; height:1000px; }
+ .collage-chapter:not(.opening-chapter) .scrap { opacity:1; filter:none; }
+ /* Avoid multiple filtered copies of large raster sheets on mobile GPUs. Scene/text RGB remains. */
+ .scrap svg.glitch-slice { display:none; }
  .collage-chapter:not(.opening-chapter) .chapter-label { top:90px; left:6%; }
  .collage-chapter:not(.opening-chapter) .chapter-title { top:135px; left:6%; font-size:clamp(60px,14vw,100px); }
  .chapter-copy { top:250px; left:6%; width:88%; max-width:540px; font-size:15px; }

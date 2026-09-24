@@ -103,11 +103,18 @@ chapters.forEach(({section, stage}) => {
 let ticking = false;
 let scrollIdleTimer;
 let scrollActive = false;
+let motionViewportWidth = window.innerWidth;
+let motionViewportHeight = window.innerHeight;
 function updateExperience() {
   ticking = false;
   header?.classList.toggle("is-scrolled", window.scrollY > 8);
 
   const vh = window.innerHeight;
+  // Ignore mobile browser-toolbar height changes; reset on a real width/orientation change.
+  if (Math.abs(window.innerWidth - motionViewportWidth) > 2) {
+    motionViewportWidth = window.innerWidth;
+    motionViewportHeight = vh;
+  }
   if (chapterMenu && homeFooter) {
     const base = window.innerWidth <= 760 ? 12 : 26;
     const footerTop = homeFooter.getBoundingClientRect().top;
@@ -168,6 +175,18 @@ function updateExperience() {
       if (reduced) {
         scrap.style.removeProperty("transform");
         scrap.style.removeProperty("opacity");
+        return;
+      }
+      if (flowingLayout && !opening) {
+        // Follow each fragment's own passage, not the section entrance. Keep the image opaque.
+        const top = rect.top + scrap.offsetTop;
+        const progress = clamp((motionViewportHeight - top) / (motionViewportHeight + scrap.offsetHeight));
+        const travel = progress * 2 - 1;
+        const x = Math.max(-18, Math.min(18, Number(scrap.dataset.x || 0) * 1.5)) * travel;
+        const y = -travel * (50 + Math.min(20, Math.abs(Number(scrap.dataset.y || 0))));
+        const turn = Math.max(-3, Math.min(3, Number(scrap.dataset.turn || 0) * .3)) * travel;
+        scrap.style.transform = `translate3d(${x.toFixed(2)}px,${y.toFixed(2)}px,0) rotate(${turn.toFixed(2)}deg)`;
+        scrap.style.opacity = "1";
         return;
       }
       const approach = clamp((vh - rect.top) / vh);
