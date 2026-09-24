@@ -3,65 +3,68 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="kyuuは、アプリ、拡張機能、Webサイト、小さなデジタルツールをつくる個人プロジェクトです。">
-    <meta name="robots" content="noindex">
-    <title>About | kyuu</title>
+    <meta name="description" content="kyuuについて、仕事のご相談・お問い合わせ先をご案内します。">
+    <title>About &amp; Contact | kyuu</title>
     <link rel="canonical" href="https://3plus6.jp/about.html">
-    <link rel="icon" href="assets/kyuu-icon.png">
+    <link rel="icon" type="image/png" href="assets/brand/kyuu-favicon.png?v=1">
+    <link rel="icon" type="image/svg+xml" href="assets/brand/kyuu-favicon.svg?v=1">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="inner.css?v=3">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="site-header" data-header>
       <a class="brand" href="index.html" aria-label="kyuu トップへ">
-        <img src="assets/kyuu-logo-header.png" alt="kyuu" class="brand-logo">
+        <span class="brand-wordmark">kyuu</span>
       </a>
       <div class="header-actions">
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+        <button class="menu-toggle" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
           <span></span>
           <span></span>
           <span></span>
         </button>
         <nav class="nav" id="site-nav" aria-label="メインナビゲーション" data-nav>
-          <a href="index.html">Home</a>
-          <a href="support.html">Sponsor</a>
-          <a href="legal.html">Legal</a>
+          <a href="index.html#nature">Services</a>
+          <a href="index.html#projects">Works</a>
+          <a href="about.html">About & Contact</a>
         </nav>
       </div>
     </header>
 
     <main>
       <section class="page-hero">
-        <h1>About</h1>
-        <p class="page-lead">
-          kyuuは現在個人プロジェクトとなっています。<br>
-          アプリ、拡張機能、Webサイト、小さなデジタルツールをつくっています。
-        </p>
+        <h1>About &amp; Contact</h1>
       </section>
 
       <section class="section legal-stack">
         <article class="legal-block">
-          <h2>Work</h2>
+          <h2>About kyuu</h2>
           <p>
-            kyuuでは、AI活用支援、事業コンサルティング、ホームページ制作、アプリ開発、プロダクト設計などのご相談を受け付けています。
-            エンターテインメント、スタートアップ、EC、デザイン、SaaSなどでの経験をもとに、状況に合わせてお手伝いします。
+            自社サービスの開発・提供をはじめ、新規事業開発、事業コンサルティング、AI活用、アプリ・ツール・Webサイトの開発、業務改善、集客・販売支援まで、幅広く取り組んでいます。
+          </p>
+          <p>
+            大切にしてきたカルチャーや、その人・事業らしさを活かしながら、新たな可能性をともに広げていきます。
           </p>
         </article>
 
-        <article class="legal-block">
+        <article class="legal-block" id="contact">
           <h2>Contact</h2>
           <p>
-            メール／SNSより、お気軽にお問い合わせ下さい。
+            メールより、お気軽にお問い合わせ下さい。
           </p>
           <div class="contact-links">
             <div>
-              <span>Mail</span>
               <a class="mail-link" href="mailto:info@3plus6.jp">info@3plus6.jp</a>
             </div>
-            <div>
-              <span>SNS</span>
-              <a class="mail-link" href="https://x.com/i10kin" target="_blank" rel="noreferrer">x.com/i10kin</a>
-            </div>
           </div>
+        </article>
+        <article class="legal-block">
+          <h2>Legal &amp; Policies</h2>
+          <nav class="policy-links" aria-label="規約と事業者情報">
+            <a href="legal.html#terms">利用規約</a>
+            <a href="legal.html#privacy">プライバシーポリシー</a>
+            <a href="legal.html#commerce-disclosure">特定商取引法に基づく表記</a>
+            <a href="legal.html">すべてのポリシー</a>
+          </nav>
         </article>
       </section>
     </main>
@@ -69,9 +72,10 @@
     <footer class="site-footer">
       <p>&copy; <span data-year></span> kyuu</p>
       <nav aria-label="フッターナビゲーション">
-        <a href="index.html">Home</a>
-        <a href="support.html">Sponsor</a>
-        <a href="legal.html">Legal</a>
+        <a href="index.html#top">Top</a>
+        <a href="index.html#nature">Services</a>
+        <a href="index.html#projects">Works</a>
+        <a href="about.html">About &amp; Contact</a>
       </nav>
     </footer>
 

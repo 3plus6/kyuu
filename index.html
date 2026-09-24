@@ -3,88 +3,137 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="kyuuは、個人事業としてWebアプリ、Chrome拡張機能、制作物を公開・運営する小さな開発スタジオです。">
+    <meta name="description" content="kyuuは、本質を保ったまま可能性を拡張する、小さなデジタルプロダクトスタジオです。">
     <meta property="og:title" content="kyuu">
-    <meta property="og:description" content="個人事業、制作物、アプリ配布、支援のための公式サイト。">
+    <meta property="og:description" content="Nine added. Essence remains.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/og-image.svg">
-    <title>kyuu | apps, extensions, and small tools</title>
+    <title>kyuu — Nine added. Essence remains.</title>
     <link rel="canonical" href="https://3plus6.jp/">
-    <link rel="icon" href="assets/kyuu-icon.png">
+    <link rel="icon" type="image/png" href="assets/brand/kyuu-favicon.png?v=1">
+    <link rel="icon" type="image/svg+xml" href="assets/brand/kyuu-favicon.svg?v=1">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="experience.css?v=works-29">
   </head>
-  <body class="home-page">
-    <header class="site-header" data-header>
-      <a class="brand" href="index.html" aria-label="kyuu トップへ">
-        <img src="assets/kyuu-logo-header.png" alt="kyuu" class="brand-logo">
+  <body class="home-page" data-home>
+    <header class="site-header home-header" data-header>
+      <a class="brand" href="#top" aria-label="kyuu トップへ">
+        <span class="brand-wordmark">kyuu</span>
       </a>
       <div class="header-actions">
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
-          <span></span>
-          <span></span>
-          <span></span>
+        <button class="menu-toggle" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+          <span></span><span></span><span></span>
         </button>
         <nav class="nav" id="site-nav" aria-label="メインナビゲーション" data-nav>
-          <a href="index.html">Home</a>
-          <a href="support.html">Sponsor</a>
-          <a href="legal.html">Legal</a>
+          <a href="#nature">Services</a>
+          <a href="#projects">Works</a>
+          <a href="about.html">About &amp; Contact</a>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section class="home-stage" aria-labelledby="projects-title">
-        <h1 id="projects-title" class="visually-hidden">kyuu projects</h1>
-        <div class="project-grid">
-          <div class="project-tile project-tile-static">
-            <span class="project-icon"><img src="assets/services/drifttt.png" alt=""></span>
-            <span class="project-name">drifttt</span>
+    <main id="top" class="home-experience">
+
+      <nav class="chapter-nav" aria-label="ページ内の章">
+        <a href="#top" data-chapter-link="opening">00 <span>Top</span></a>
+        <a href="#nature" data-chapter-link="nature">03 <span>Refine</span></a>
+        <a href="#principle" data-chapter-link="principle">06 <span>Develop</span></a>
+        <a href="#resonance" data-chapter-link="resonance">09 <span>Build</span></a>
+        <a href="#projects" data-chapter-link="projects">↗ <span>Works</span></a>
+      </nav>
+      <section class="collage-chapter opening-chapter" id="opening" data-chapter>
+        <div class="chapter-stage">
+          <div class="opening-composition">
+            <img class="opening-art" src="assets/kyuu-main-0923.png" alt="絵画、弥勒菩薩、都市と生命、宇宙の図版が重なる切り貼りコラージュ">
+            <div class="opening-title"><h1>kyuu</h1></div>
           </div>
-          <a class="project-tile" href="https://chromewebstore.google.com/detail/cmlbmmhjfhagefgmcfifhkoidhicpcjk?utm_source=item-share-cb" target="_blank" rel="noreferrer">
-            <span class="project-icon"><img src="assets/services/tabkma.png" alt=""></span>
-            <span class="project-name">tbkma</span>
-          </a>
-          <a class="project-tile" href="https://chromewebstore.google.com/detail/amfjmkpkbpagcghnbpolegiekeijikhb?utm_source=item-share-cb" target="_blank" rel="noreferrer">
-            <span class="project-icon"><img src="assets/services/remute.png" alt=""></span>
-            <span class="project-name">remute</span>
-          </a>
-          <a class="project-tile" href="https://chromewebstore.google.com/detail/bcoconhognondpgpcakbccdndanaegol?utm_source=item-share-cb" target="_blank" rel="noreferrer">
-            <span class="project-icon"><img src="assets/services/damaru.png" alt=""></span>
-            <span class="project-name">damaru</span>
-          </a>
-          <a class="project-tile" href="https://chromewebstore.google.com/detail/gllfefgljjmemccgkndckamjhbmndlde?utm_source=item-share-cb" target="_blank" rel="noreferrer">
-            <span class="project-icon"><img src="assets/services/tabero-goo.png" alt=""></span>
-            <span class="project-name">tabero→Goo</span>
-          </a>
-          <div class="project-tile project-tile-static">
-            <span class="project-icon"><img src="assets/services/kyuu.png" alt=""></span>
-            <span class="project-name">kyuu</span>
-          </div>
-          <div class="project-tile project-tile-static">
-            <span class="project-icon"><img src="assets/services/kyuu.png" alt=""></span>
-            <span class="project-name">kyuu</span>
-          </div>
-          <div class="project-tile project-tile-static">
-            <span class="project-icon"><img src="assets/services/kyuu.png" alt=""></span>
-            <span class="project-name">kyuu</span>
-          </div>
-          <div class="project-tile project-tile-static">
-            <span class="project-icon"><img src="assets/services/kyuu.png" alt=""></span>
-            <span class="project-name">kyuu</span>
-          </div>
+          <a class="chapter-scroll" href="#nature">SCROLL TO EXPLORE <span>↓</span></a>
         </div>
+      </section>
+      <section class="collage-chapter nature-chapter refine-chapter" id="nature" data-chapter>
+        <div class="chapter-stage">
+          <div class="chapter-label">03 / PAST</div>
+          <h2 class="chapter-title">Refine.</h2>
+          <div class="chapter-copy"><p class="chapter-lead"><span>積み重ねてきたものの</span><span>良さを活かし、</span><br><span>さらに磨きます。</span></p><p>事業や日々の業務の現状をひもとき、課題の発見から改善の実行まで取り組みます。</p></div>
+          <div class="scrap refine-angel paper-fragment" data-motion data-enter="0.03" data-x="-12" data-y="-8" data-turn="-5" aria-hidden="true"><svg viewBox="0 0 962 522" width="962" height="522"><image href="assets/kyuu-past-0923.png" width="1536" height="1024"/></svg><div class="analog-static"></div></div>
+          <div class="scrap refine-photo paper-fragment" data-motion data-enter="0.08" data-x="4" data-y="-14" data-turn="7" aria-hidden="true"><svg viewBox="980 568 505 428" width="505" height="428"><image href="assets/kyuu-past-0923.png" width="1536" height="1024"/></svg><div class="analog-static"></div></div>
+          <div class="scrap refine-study paper-fragment" data-motion data-enter="0.16" data-x="-5" data-y="-10" data-turn="-6" aria-hidden="true"><svg viewBox="540 520 400 482" width="400" height="482"><image href="assets/kyuu-past-0923.png" width="1536" height="1024"/></svg></div>
+        </div>
+      </section>
+      <section class="collage-chapter thought-chapter" id="principle" data-chapter>
+        <div class="chapter-stage">
+          <div class="chapter-label">06 / PRESENT</div>
+          <h2 class="chapter-title">Develop.</h2>
+          <div class="chapter-copy"><p class="chapter-lead"><span>今動いているものを整え、</span><br><span>育て続けます。</span></p><p>業務の流れや役割を整理し、本来取り組むべきことに集中できる仕組みをつくります。</p></div>
+          <div class="scrap operate-forest paper-fragment" data-motion data-enter="0.02" data-x="-8" data-y="-18" data-turn="8" aria-hidden="true"><svg viewBox="10 35 894 549" width="894" height="549"><image href="assets/kyuu-present-0923.png" width="1672" height="941"/></svg></div>
+          <div class="scrap operate-cells paper-fragment" data-motion data-enter="0.18" data-x="8" data-y="-12" data-turn="12" aria-hidden="true"><svg viewBox="18 614 761 278" width="761" height="278"><image href="assets/kyuu-present-0923.png" width="1672" height="941"/></svg></div>
+          <div class="scrap operate-flower paper-fragment" data-motion data-enter="0.10" data-x="6" data-y="-14" data-turn="-6" aria-hidden="true"><svg viewBox="862 15 478 561" width="478" height="561"><image href="assets/kyuu-present-0923.png" width="1672" height="941"/></svg></div>
+          <div class="scrap operate-matter paper-fragment" data-motion data-enter="0.12" data-x="-5" data-y="-10" data-turn="9" aria-hidden="true"><svg viewBox="831 596 492 328" width="492" height="328"><image href="assets/kyuu-present-0923.png" width="1672" height="941"/></svg></div>
+          <div class="signal-break" aria-hidden="true"></div>
+        </div>
+      </section>
+      <section class="collage-chapter resonance-chapter" id="resonance" data-chapter>
+        <div class="chapter-stage">
+          <div class="chapter-label">09 / FUTURE</div>
+          <h2 class="chapter-title">Build.</h2>
+          <div class="chapter-copy"><p class="chapter-lead"><span>これから必要になるものを、</span><br><span>構想から形にします。</span></p><p>AIの活用やアプリ・ツールの開発、新規事業の立ち上げから集客まで、ともにつくります。</p></div>
+          <div class="scrap build-statue sheet-statue" data-motion data-enter="0.05" data-x="4" data-y="-12" data-turn="3" aria-hidden="true"><svg viewBox="14 39 563 953" width="563" height="953"><image href="assets/kyuu-future-0923.png" width="1536" height="1024"/></svg></div>
+          <div class="scrap build-orbit paper-fragment" data-motion data-enter="0.02" data-x="-8" data-y="-15" data-turn="-8" aria-hidden="true"><svg viewBox="490 37 597 482" width="597" height="482"><image href="assets/kyuu-future-0923.png" width="1536" height="1024"/></svg></div>
+          <div class="scrap resonance-field paper-fragment" data-motion data-enter="0.16" data-x="8" data-y="-12" data-turn="8" aria-hidden="true"><svg viewBox="818 551 326 411" width="326" height="411"><image href="assets/kyuu-future-0923.png" width="1536" height="1024"/></svg></div>
+          <div class="signal-break" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="works-stage" id="projects" aria-labelledby="projects-title">
+        <header class="works-heading">
+          <h2 id="projects-title">Works.</h2>
+        </header>
+
+        <p class="upcoming-note">IN DEVELOPMENT</p>
+        <div class="works-contact">
+          <a href="about.html"><span>About &amp; Contact</span><span aria-hidden="true">→</span></a>
+        </div>
+        <div class="project-catalog" hidden>
+          <article class="catalog-item catalog-item-featured">
+            <div class="catalog-number">001</div>
+            <img src="assets/services/drifttt.png" alt="" class="catalog-icon">
+            <div><h3>drifttt</h3><p>Project</p></div>
+          </article>
+          <a class="catalog-item" href="https://chromewebstore.google.com/detail/cmlbmmhjfhagefgmcfifhkoidhicpcjk?utm_source=item-share-cb" target="_blank" rel="noreferrer">
+            <div class="catalog-number">002</div>
+            <img src="assets/services/tabkma.png" alt="" class="catalog-icon">
+            <div><h3>tbkma</h3><p>Chrome extension <span aria-hidden="true">↗</span></p></div>
+          </a>
+          <a class="catalog-item" href="https://chromewebstore.google.com/detail/amfjmkpkbpagcghnbpolegiekeijikhb?utm_source=item-share-cb" target="_blank" rel="noreferrer">
+            <div class="catalog-number">003</div>
+            <img src="assets/services/remute.png" alt="" class="catalog-icon">
+            <div><h3>remute</h3><p>Chrome extension <span aria-hidden="true">↗</span></p></div>
+          </a>
+          <a class="catalog-item" href="https://chromewebstore.google.com/detail/bcoconhognondpgpcakbccdndanaegol?utm_source=item-share-cb" target="_blank" rel="noreferrer">
+            <div class="catalog-number">004</div>
+            <img src="assets/services/damaru.png" alt="" class="catalog-icon">
+            <div><h3>damaru</h3><p>Chrome extension <span aria-hidden="true">↗</span></p></div>
+          </a>
+          <a class="catalog-item" href="https://chromewebstore.google.com/detail/gllfefgljjmemccgkndckamjhbmndlde?utm_source=item-share-cb" target="_blank" rel="noreferrer">
+            <div class="catalog-number">005</div>
+            <img src="assets/services/tabero-goo.png" alt="" class="catalog-icon">
+            <div><h3>tabero→Goo</h3><p>Chrome extension <span aria-hidden="true">↗</span></p></div>
+          </a>
+        </div>
+
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer home-footer">
       <p>&copy; <span data-year></span> kyuu</p>
       <nav aria-label="フッターナビゲーション">
-        <a href="index.html">Home</a>
-        <a href="support.html">Sponsor</a>
-        <a href="legal.html">Legal</a>
+        <a href="#top">Top</a>
+        <a href="#nature">Services</a>
+        <a href="#projects">Works</a>
+        <a href="about.html">About &amp; Contact</a>
       </nav>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=works-29"></script>
   </body>
 </html>
